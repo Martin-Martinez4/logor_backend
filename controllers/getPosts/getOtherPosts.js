@@ -27,7 +27,7 @@ export const handleGetCommentsByUserID = (req, res, next, db) => {
             err.message = "Error getting user comments."
     
             next(err);
-            res.json([])
+            // res.json([])
         });
 
 
@@ -61,7 +61,7 @@ export const handleGetCommentsByUserNickname = (req, res, next, db) => {
             err.message = "Error getting user comments by nickname."
     
             next(err);
-            res.json([])
+            // res.json([])
         });
 
 }
@@ -91,7 +91,7 @@ export const handleGetCommentsByTag = (req, res, next, db) => {
         err.message = "Error getting comments by tag."
 
         next(err);
-        res.json([])
+        // res.json([])
     });
 
 
@@ -126,7 +126,7 @@ export const handleGetTagByName = (req, res, next, db) => {
         err.message = "Error getting comments by tag name."
 
         next(err);
-        res.json([])
+        // res.json([])
     });
 }
 
