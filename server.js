@@ -94,7 +94,7 @@ export const db = knex({
     client: 'pg',
     connection: {
       url: process.env.DATABASE_URL,
-      ssl : true
+      ssl : false
     },
   });
 
