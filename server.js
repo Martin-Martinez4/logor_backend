@@ -92,7 +92,7 @@ import comments from './routes/comments.js';
 //   });
 export const db = knex({
     client: 'pg',
-    connection: process.env.DATABASE_URL + "?&sslmode=require",
+    connection: process.env.DATABASE_URL
   });
 
   const allowedOrigins = ['http://localhost:3000'];
