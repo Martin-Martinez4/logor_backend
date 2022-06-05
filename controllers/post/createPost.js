@@ -63,7 +63,6 @@ export const handleCreatePost = (req, res, next, db) => {
             
                     next(err);
             
-                    res.json("Error")
                 });
     
             })
@@ -81,7 +80,6 @@ export const handleCreatePost = (req, res, next, db) => {
     
             next(err);
     
-            res.json("")
         });
 
 

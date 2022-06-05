@@ -88,7 +88,6 @@ export const handleRegister = (req, res, next, db) => {
                         err.message = "Error creating user";
                 
                         next(err);
-                        res.json({})
                     
                     })
             })
@@ -107,7 +106,6 @@ export const handleRegister = (req, res, next, db) => {
             err.message =  "Error creating user";
     
             next(err);
-            res.json({})
         
         })
     })
@@ -120,7 +118,6 @@ export const handleRegister = (req, res, next, db) => {
         err.message =  "Error creating user";
 
         next(err);
-        res.json({})
     
     });
 
@@ -159,7 +156,6 @@ export const handleUsernameExists = (req, res, next, db) => {
         err.message =  "Error creating user";
 
         next(err);
-        res.json({})
     
     })
 
@@ -198,7 +194,6 @@ export const handleNicknameExists = (req, res, next, db) => {
         err.message =  "Error creating user";
 
         next(err);
-        res.json({})
     
     })
 
