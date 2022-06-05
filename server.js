@@ -93,8 +93,8 @@ import comments from './routes/comments.js';
 export const db = knex({
     client: 'pg',
     connection: {
-      url: process.env.DATABASE_URL,
-      ssl : false
+      uri: process.env.DATABASE_URL,
+      ssl : true
     },
   });
 
