@@ -58,11 +58,11 @@ const secret = process.env.ACCESS_SECRET;
 // app.use(helmet());
 // app.use(helmet.crossOriginOpenerPolicy({ policy: "same-origin-allow-popups" }));
 
-app.use(
-  helmet({
-    crossOriginResourcePolicy: false,
-  })
-)
+// app.use(
+//   helmet({
+//     crossOriginResourcePolicy: false,
+//   })
+// )
 
 app.use(express.static(path.join(__dirname,'temp')));
 
@@ -94,7 +94,7 @@ export const db = knex({
     client: 'pg',
     connection: {
       connectionString: process.env.DATABASE_URL,
-      ssl: { require: false, rejectUnauthorized: false }
+      // ssl: { require: false, rejectUnauthorized: false }
     }
   });
 
@@ -272,6 +272,6 @@ app.use((error, req ,res, next) => {
 
 app.listen(process.env.PORT || 3001, () => {
 
-    console.log("server is running on port 3001")
+    console.log(`server is running on port ${process.env.PORT || 3001}`)
 })
 

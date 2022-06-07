@@ -96,7 +96,7 @@ export const handleGetGetMiniProfileInfo = (req, res, next, db) => {
 
 }
 
-export const  handleGetLoggedinUserInfo = (req, res, next, db) => {
+export const handleGetLoggedinUserInfo = (req, res, next, db) => {
 
     const user_id = req.user_id;
 
