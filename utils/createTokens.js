@@ -3,6 +3,8 @@ import jwt from "jsonwebtoken"
 
 export const jwtTokens = ({ id }) => {
 
+    console.log({jwtId: id})
+
     // verify token: 
     // var decoded = jwt.verify(token, process.env.ACCESS_SECRET);
 

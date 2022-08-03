@@ -60,6 +60,9 @@ export const handleSignin2 = (req, res, next, db) => {
     // get username and password from body request
     const {username, password} = req.body
 
+    console.log({signInBody: body})
+
+
 
     // Check if both username and password are present
     if(!username || !password){
