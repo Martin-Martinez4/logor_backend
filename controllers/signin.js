@@ -60,7 +60,7 @@ export const handleSignin2 = (req, res, next, db) => {
     // get username and password from body request
     const {username, password} = req.body
 
-    console.log({signInBody: body})
+    console.log({signInBody: req.body})
 
 
 
