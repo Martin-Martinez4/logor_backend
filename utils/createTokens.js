@@ -48,7 +48,7 @@ export const refreshCookie = (req, res) => {
 
             let tokens = jwtTokens(user);
 
-            // res.cookie('refresh_token', tokens.refresh_token, { httpOnly: true, sameSite: "none", secure: true});
+            // maxAge is in miliseconds, expires in 5 hours
             res.cookie('refresh_token', tokens.refresh_token, { httpOnly: true, sameSite: 'None', maxAge: 5 * 60 * 60 * 1000 });
 
             // console.log("tokens: ", tokens)

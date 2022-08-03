@@ -115,7 +115,7 @@ export const db = knex({
     }
   });
 
-  const allowedOrigins = [`${process.env.FRONTEND_BASE_URL}`];
+const allowedOrigins = [`${process.env.FRONTEND_BASE_URL}`];
 
 const options = {
   origin: allowedOrigins,
