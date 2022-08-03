@@ -77,12 +77,8 @@ export const handleSignin2 = (req, res, next, db) => {
     .where('username', '=', username)
     .then((data) => {
 
-        console.log({data: data})
-
         
         bcrypt.compare(password, data[0].password).then((result) => {
-
-            console.log({result: result})
 
     
             if(result){
@@ -92,10 +88,6 @@ export const handleSignin2 = (req, res, next, db) => {
                 .where('users.username', '=', data[0].username)
                 .then((user) => {
                         
-                    // console.log("user[0].id: ", user[0].id)s
-                    console.log({user: user})
-
-
                     const tokens = jwtTokens(user[0])
 
                     // res.cookie('refresh_token', tokens.refresh_token, {httpOnly: true,  sameSite: 'none', secure: true});
