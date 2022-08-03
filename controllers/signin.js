@@ -60,10 +60,6 @@ export const handleSignin2 = (req, res, next, db) => {
     // get username and password from body request
     const {username, password} = req.body
 
-    console.log({signInBody: req.body})
-
-
-
     // Check if both username and password are present
     if(!username || !password){
 
@@ -82,8 +78,6 @@ export const handleSignin2 = (req, res, next, db) => {
     .then((data) => {
         
         bcrypt.compare(password, data[0].password).then((result) => {
-
-            console.log(result)
     
             if(result){
             // if(data[0].password === password){
@@ -92,7 +86,9 @@ export const handleSignin2 = (req, res, next, db) => {
                 .where('users.username', '=', data[0].username)
                 .then((user) => {
                         
-                    // console.log("user[0].id: ", user[0].id)
+                    // console.log("user[0].id: ", user[0].id)s
+                    console.log({user: user})
+
 
                     const tokens = jwtTokens(user[0])
 
