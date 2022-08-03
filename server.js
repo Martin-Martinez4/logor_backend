@@ -105,14 +105,13 @@ import comments from './routes/comments.js';
 //     }
 //   });
 
-// const sslSettings = process.env.NODE_ENV === 'development' ? '' : { require: false, rejectUnauthorized: false }
-const sslSettings = ''
-
+const sslSettings = process.env.NODE_ENV === 'development' ? '' : { require: false, rejectUnauthorized: false }
 
 export const db = knex({
     client: 'pg',
     connection: {
       connectionString: process.env.DATABASE_URL,
+      ssl: sslSettings
     }
   });
 
