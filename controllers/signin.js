@@ -76,8 +76,14 @@ export const handleSignin2 = (req, res, next, db) => {
     db.select('username', 'password').from('login')
     .where('username', '=', username)
     .then((data) => {
+
+        console.log({data: data})
+
         
         bcrypt.compare(password, data[0].password).then((result) => {
+
+            console.log({result: result})
+
     
             if(result){
             // if(data[0].password === password){
