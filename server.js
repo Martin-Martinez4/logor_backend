@@ -105,7 +105,9 @@ import comments from './routes/comments.js';
 //     }
 //   });
 
-const sslSettings = process.env.NODE_ENV === 'development' ? '' : { require: false, rejectUnauthorized: false }
+// const sslSettings = process.env.NODE_ENV === 'development' ? '' : { require: false, rejectUnauthorized: false }
+const sslSettings = ''
+
 
 export const db = knex({
     client: 'pg',
